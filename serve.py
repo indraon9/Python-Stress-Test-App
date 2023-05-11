@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/', methods = ['POST'])
 def store():
-    p = subprocess.Popen(["python3", "stress_cpu.py"], shell=True)
+    p = subprocess.Popen("python3 stress_cpu.py", shell=True)
     return "success"
 
 @app.route('/', methods = ['GET'])
