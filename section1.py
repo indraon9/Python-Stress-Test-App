@@ -7,7 +7,7 @@ app = Flask(__name__)
 def store():
     body = request.get_json(force=True)
     with open("seed", "w") as f:
-      f.writelines(body["num"])
+      f.writeline(body["num"])
     return "success"
 
 @app.route('/', methods = ['GET'])
